@@ -27,7 +27,7 @@ LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN 		echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf
+RUN 		echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf
 RUN 		sudo sysctl -p
 
 RUN 		apt-get update -y \
