@@ -28,7 +28,7 @@ LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolk
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN 		echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf
-RUN 		sudo sysctl -p
+RUN 		sysctl -p
 
 RUN 		apt-get update -y \
  			&& apt-get install -y lsof curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 tzdata iproute2 libstdc++6 \
